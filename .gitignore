@@ -1,0 +1,81 @@
+# Object files
+*.o
+
+# Libraries
+*.lib
+*.lo
+*.a
+*.la
+.libs/
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# autotools related files
+conftools/
+Makefile
+!/src/dpdk/Makefile
+./config.h
+config.h.in
+config.log
+config.status
+autom4te.cache/
+stamp-h*
+libtool
+mk/doxygen.conf
+
+# dependencies
+.depend
+
+# *~ files
+*~
+
+# Generated file.
+src/include/lagopus_config.h
+src/include/lagopus_platform.h
+src/lib/check/check[0-9]
+src/lib/check/check1-a
+mk/vars.mk
+
+# External tools
+# Unity
+tools/unity/.gitignore
+tools/unity/Gemfile
+tools/unity/auto/
+tools/unity/docs/
+tools/unity/examples/
+tools/unity/extras/
+tools/unity/makefile
+tools/unity/rakefile.rb
+tools/unity/rakefile_helper.rb
+tools/unity/release/
+tools/unity/src/unity.c
+tools/unity/src/unity.h
+tools/unity/src/unity_internals.h
+tools/unity/targets/
+tools/unity/test/
+test_result_dir
+
+
+# Coverage
+*.gcno
+*.gcda
+*.gcov
+gcov.mk
+
+# Profiling
+gmon.out
+callgrind.*
+
+# Unity tests.
+*_test_runner.c
+*.testresult
+*_test

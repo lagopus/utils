@@ -1,0 +1,28 @@
+TOPDIR		= @TOPDIR@
+MKRULESDIR	= @MKRULESDIR@
+
+include $(MKRULESDIR)/vars.mk
+
+INSTALL_HEADER_DIR	= $(DEST_HDRDIR_TOP)
+
+INSTALL_HEADER_TARGETS	= \
+	lagopus_apis.h lagopus_argv0.h lagopus_bbq.h \
+	lagopus_callout.h lagopus_callout_internal.h lagopus_callout_task_funcs.h \
+	lagopus_callout_task_state.h lagopus_cbuffer.h lagopus_chrono.h \
+	lagopus_config.h lagopus_dstring.h lagopus_error.h \
+	lagopus_gstate.h lagopus_hashmap.h lagopus_heapcheck.h \
+	lagopus_includes.h lagopus_ip_addr.h lagopus_lock.h \
+	lagopus_logger.h lagopus_macros.h lagopus_mainloop.h \
+	lagopus_module_apis.h lagopus_numa.h lagopus_perror.h \
+	lagopus_pipeline_stage.h lagopus_pipeline_stage_funcs.h lagopus_pipeline_stage_internal.h \
+	lagopus_platform.h lagopus_qmuxer.h lagopus_qsort.h \
+	lagopus_runnable.h lagopus_runnable_funcs.h lagopus_runnable_internal.h \
+	lagopus_session.h lagopus_session_tls.h lagopus_signal.h \
+	lagopus_statistic.h lagopus_strutils.h lagopus_thread.h \
+	lagopus_thread_internal.h lagopus_types.h lagopus_version.h
+
+
+include $(MKRULESDIR)/rules.mk
+
+distclean::
+	$(RM) lagopus_config.h lagopus_platform.h *.new *.bak

@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package packets_io;
+
+message packet {
+  int32 port = 1;
+  uint32 len = 2;
+  bytes data = 3;
+}
+
+message bulk_packets {
+  int64 n = 1;
+  repeated packet packets = 2;
+}
+
+message result {
+  int64 r = 1;
+}
+
+message null {
+}
+
+message arp_entry {
+  string vip  = 1;
+  string vmac = 2;
+}
+
+message arp_info {
+  string ifname = 1;
+  int32 port  = 2;
+  uint64 n = 3;
+  repeated arp_entry entries = 4;
+}
+
+message arp_infos {
+  uint64 n = 1;
+  repeated arp_info infos = 2;
+}
+
+service packets_io {
+  rpc send_stream (stream packet) returns (result) {}
+  rpc recv_stream (null) returns (stream packet) {}
+  rpc send_bulk (bulk_packets) returns (result) {}
+  rpc recv_bulk (null) returns (bulk_packets) {}
+  rpc to_master(arp_infos) returns (result) {}
+  rpc to_backup(arp_infos) returns (result) {}
+}

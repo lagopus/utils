@@ -1,0 +1,19 @@
+/* %COPYRIGHT% */
+
+#ifndef SRC_INCLUDE_LAGOPUS_VERSION_H_
+#define SRC_INCLUDE_LAGOPUS_VERSION_H_
+
+/**
+ * Lagopus version information
+ *
+ * PRODUCT_NAME version MM.mm.ppRELEASE
+ */
+
+#define LAGOPUS_PRODUCT_NAME "Lagopus"
+
+#define LAGOPUS_VERSION_MAJOR 0
+#define LAGOPUS_VERSION_MINOR 3
+#define LAGOPUS_VERSION_PATCH 0
+#define LAGOPUS_VERSION_RELEASE "-dev"
+
+#endif /* SRC_INCLUDE_LAGOPUS_VERSION_H_ */
