@@ -4,7 +4,7 @@ Utils for Lagopus Software Switch
 Supported distribution
 ===============================
 - Linux
-  - Ubuntu 14.04, Ubuntu 16.04
+  - Ubuntu 16.04, Ubuntu 18.04
   - CentOS 7
 - FreeBSD
 - NetBSD
