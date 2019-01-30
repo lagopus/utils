@@ -52,6 +52,7 @@ static const char *const s_error_strs[] = {
   "Invalid state",			/* 42 */
   "Invalid namespace",			/* 43 */
   "Interrupted",			/* 44 */
+  "Unknown protocol",			/* 45 */
 
   NULL
 };
